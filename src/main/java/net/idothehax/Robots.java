@@ -5,6 +5,8 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.awt.*;
+
 public class Robots implements ModInitializer {
 	public static final String MOD_ID = "robots";
 
@@ -19,6 +21,10 @@ public class Robots implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Beep Boop Hello From Robots!");
+
+		RobotRegistries.registerBlockEntities();
+		RobotRegistries.registerBlocks();
+		RobotRegistries.registerItems();
 	}
 }
